@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 2</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 70px;
+      background-color: #c3d9f0; /* Fondo suave */
+    }
+    section {
+      padding: 60px 0;
+    }
+    .active {
+      display: block;
+    }
+    section:not(.active) {
+      display: none;
+    }
+    nav img {
+      height: 50px;
+    }
+    .section-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .card-section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="mendix.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('mendix')">Objetivos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('ventajas')">Gestion del ciclo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('casos')">Metodologia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('recursos')">Roles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('datos')">Equipo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('historia')">Historias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('wireframe')">Wireframe</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('epicas')">Epicas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('resumen')">Resumen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('conocimientos')">Conocimientos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Secciones -->
+  <section id="mendix" class="active container">
+    <h1 class="mb-4">Objetivo de aprendizaje</h1>
+
+    <div class="card card-section shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Al finalizar podrás:</h5>
+        <ul>
+          <li>Describir la gestión del ciclo de vida de las aplicaciones</li>
+          <li>Crear una nueva aplicacion</li>
+          <li>Describe la metodologia de proyectos Agile y sus beneficios</li>
+          <li>Define los diferentes roles involucrados en un equipo Scrum</li>
+          <li>Identifique a su equipo d eproyecto Mendix e invite a los miembros del equipo a su aplicacion</li>
+          <li>Explicar el papel y la importancia de las historias de usuario</li>
+          <li>Crea un wireframe para tu aplicacion</li>
+          <li>Crear y administrar historias de usuario en Epics</li>
+          <li>Inicia un nuevo sprint</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="ventajas" class="container">
+    <h1 class="mb-4">Gestion del ciclo de vida de las aplicaciones</h1>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Captura
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+             Mendix facilita el proceso de ideación ofreciendo diversas funciones de colaboración. Por ejemplo, puedes usar Buzz para generar ideas con tus compañeros de equipo, hacer preguntas, crear una encuesta y tomar decisiones.
+           </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Desplegar
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Cuando la aplicación está lista para probarse o lanzarse, Mendix se encarga de la fase de implementación con un solo clic. Los usuarios pueden acceder directamente desde su móvil, portátil u otros dispositivos.     
+        </div>
+        </div>
+      </div>
+     <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Iterar/Retroalimentacion
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Desarrollar aplicaciones transformadoras a gran velocidad requiere experimentación rápida, iteraciones frecuentes y una estrecha colaboración entre la empresa y el departamento de TI. Mientras que muchas herramientas de desarrollo de aplicaciones se centran en la implementación, Mendix apoya cada etapa del ciclo.    
+        </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="casos" class="container">
+    <h1 class="mb-4">Metodologia del proyecto</h1>
+    <p>El desarrollo de aplicaciones transformadoras requiere experimentación rápida, iteración frecuente y una estrecha colaboración entre la empresa y el departamento de TI. La solución moderna a estos problemas se denomina desarrollo ágil. Con Agile, la productividad y los resultados del proyecto mejoran al priorizar la velocidad y, por supuesto, la agilidad.</p>
+    <img src="metodologia" alt="">
+</section>
+
+  <section id="recursos" class="container">
+    <h1 class="mb-4">Roles de la aplicacion</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+    <p>Todo el equipo Scrum trabaja en conjunto para garantizar el éxito del proyecto. Idealmente, se capacitan mutuamente para que el éxito del equipo no dependa de una sola persona.</p>    
+    <hr>
+    <li>El propietario del producto realiza un seguimiento de las expectativas de las partes interesadas y define la visión y los requisitos de la aplicación.</li>
+    <li>El Scrum Master se asegura de que el equipo Scrum pueda trabajar según la metodología Scrum y se centra en optimizar los procesos dentro del equipo. Si el equipo se estanca debido a factores que escapan a su control, es responsabilidad del Scrum Master eliminar esos impedimentos.</li>
+    <li>El equipo de desarrollo está formado por quienes crean la aplicación. Un equipo de Mendix App suele estar formado por dos o tres miembros, como ingenieros, diseñadores, arquitectos y testers.</li>
+    </section>
+
+    <section id="datos" class="container">
+    <h1 class="mb-4">Constrir un equipo en Mendix</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+    <p>Dentro de un proyecto de aplicación de Mendix, hay un par de roles de proyecto disponibles por defecto.</p>    
+    <hr>
+    <p>También puedes contar con un Ingeniero/Tester de Rendimiento o un Operador de Aplicaciones. Estos pueden supervisar el correcto funcionamiento de la aplicación e implementar la última versión para actualizaciones. Sin embargo, no participan en el desarrollo de la aplicación.</p>
+    <p>También puedes agregar roles de proyecto adicionales o editar los existentes según tus preferencias y necesidades. Pero, por lo general, los roles predeterminados son suficientes.
+
+    Puedes gestionar todo lo relacionado con tu equipo en la página Equipo del Portal de Mendix. Puedes invitar a nuevos miembros, eliminar a los existentes y administrar los roles y permisos de cada uno.</p>
+    </section>
+
+    <section id="historia" class="container">
+    <h1 class="mb-4">Historias de usuarios</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+    <p>Una historia de usuario es una forma de traducir las necesidades de tus usuarios en elementos en los que puedes trabajar. Se presenta en forma de una oración que describe las necesidades y su contexto. Verás el formato de esta oración al final de la lección. El objetivo de las 
+        historias de usuario es decidir en qué se debe trabajar antes de comenzar. Las historias de usuario también se pueden agrupar en fragmentos aún más grandes llamados epopeyas , que contienen varias historias.</p>    
+    <p>Las epopeyas son una buena manera de organizar mejor tus historias. Desde cada epopeya, puedes añadir y eliminar historias de usuario, asignarles propietarios y consultar el progreso de las historias completadas.</p>
+    <p>Con las metodologías ágiles y orientadas al valor, el tiempo y los recursos se establecen. Lo que varía es el valor de las funcionalidades que se proporcionarán a los usuarios (en otras palabras, cuánto trabajo se puede realizar en el tiempo establecido con el equipo asignado). Si una historia de usuario no se puede completar al final de un sprint, simplemente se traslada al siguiente. Con esto en mente, los equipos trabajan primero en las historias de alto valor, y las funcionalidades menos importantes y deseables se completan más adelante, si el equipo aún tiene tiempo.</p>        
+</section>
+    
+    <section id="wireframe" class="container">
+    <h1 class="mb-4">Crear un Wireframe</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+    <p>Un wireframe permite decidir en qué se trabajará antes de empezar. Es una forma visual y sencilla de diseñar las características básicas de la aplicación que se desea desarrollar. No importa el medio. Se puede hacer con una pizarra, un software de diseño o incluso una servilleta. Tampoco necesita ser detallado ni perfecto; solo necesita disipar la incertidumbre del diseño de la interfaz una vez que comienza el desarrollo.</p>    
+     </section>
+
+<section id="epicas" class="container">
+    <h1 class="mb-4">Epicas</h1>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Junta
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Aquí puedes consultar el estado actual de tu Sprint Activo. De un vistazo, puedes ver la cantidad de historias en el tablero y quién está trabajando en qué. Las épicas han configurado cuatro carriles predeterminados para tu proyecto. Puedes agregar, editar o eliminar los carriles, excepto los carriles "Por hacer" y "Hecho"; estos dos son obligatorios.     
+        </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Planificacion
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            La página de Planificación es donde organizarás tu trabajo y refinarás o planificarás historias para los próximos sprints. La página de planificación consta de cuatro secciones:
+            <ul>
+                <li>Sprint activo, que incluye las historias que se muestran en su tablero.</li>
+                <li>Próximo Sprint, que contiene historias refinadas y listas para ser elegidas para el próximo sprint.</li>
+                <li>Refinamiento, que debe contener las historias que se asignarán en una sesión de refinamiento.</li>
+                <li>Backlog, que contiene todas las historias de usuario que no encajan en ninguna de las otras tres categorías. Puede que estén sin refinar, en espera de algo o simplemente no se hayan movido a la categoría correcta.</li>
+            </ul>
+        </div>
+        </div>
+      </div>
+     <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Epicas
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Clasificar tus historias de usuario en épicas es una buena manera de obtener una mejor visión general de las principales funcionalidades de tu proyecto. Desde cada épica, puedes añadir y eliminar historias de usuario, asignarles propietarios y consultar el progreso de las historias completadas.
+
+            La forma de agrupar tus historias en epopeyas dependerá de cómo priorices la funcionalidad.    
+        </div>
+        </div>
+      </div>    
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Archivo
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+             todas las historias completadas se moverán al Archivo. El contenido de esa página no se puede editar y su función principal es seguir el progreso de una historia y saber qué sucedió durante su desarrollo y finalización.    
+        </div>
+        </div>
+      </div>  
+</section>
+
+    <section id="resumen" class="container">
+    <h1 class="mb-4">Resumen</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+        <p>En este módulo, aprendió más sobre cómo puede utilizar la plataforma Mendix para trabajar eficazmente con su equipo.</p>
+</section>
+
+  <section id="conocimientos" class="container">
+    <h1 class="mb-4">Conocimientos</h1>
+    
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h5>Puedes crear una nueva aplicacion desde el portal de Mendix</h5>
+        <p>Es correcto</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>Si un equipo Scrum se estanca debido a cuestiones que están fuera de su control, ¿quién es responsable de eliminar esos impedimentos?</h5>
+        <p>El Scrum Master.</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>Un factor crítico de éxito para las empresas que trabajan con Mendix es:</h5>
+        <p>Trabajar en pequeños equipos multifuncionales</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    function mostrarSeccion(id){
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+    
+</body>
+</html>

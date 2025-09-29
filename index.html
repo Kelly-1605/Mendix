@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 70px;
+      background-color: #f8f9fa; /* Fondo suave */
+    }
+    section {
+      padding: 60px 0;
+    }
+    .active {
+      display: block;
+    }
+    section:not(.active) {
+      display: none;
+    }
+    nav img {
+      height: 50px;
+    }
+    .section-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .card-section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="mendix.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('mendix')">Bienvenidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('ventajas')">La interfaz</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('casos')">Ecosistema</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('recursos')">Resumen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('datos')">Conocimientos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Secciones -->
+  <section id="mendix" class="active container">
+    <h1 class="mb-4">Bienvenidos!!!</h1>
+    <p class="lead">Esta ruta de aprendizaje es para todos aquellos que quieran aprender a crear aplicaciones con la plataforma Mendix.</p>
+    <div class="card card-section shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Al finalizar esta ruta podrás:</h5>
+        <ul>
+          <li>Describe los diferentes componentes de la plataforma Mendix y su función.</li>
+          <li>Configura tu perfil de la Comunidad Mendix.</li>
+          <li>Establece colaboración con tu equipo.</li>
+          <li>Reconocer los elementos de la interfaz de Mendix Studio Pro.</li>
+          <li>Crea páginas y estructura datos en tu app.</li>
+          <li>Utiliza Microflows y automatiza procesos.</li>
+          <li>Protege tu aplicación y garantiza datos válidos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="ventajas" class="container">
+    <h1 class="mb-4">La interfaz de la academia</h1>
+    <img src="ventajas.png" alt="Interfaz" class="section-img rounded shadow-sm">
+    <p>La interfaz de la Academia utiliza un método intuitivo y visual para ayudarte a alcanzar tus objetivos de aprendizaje
+      Cada módulo contiene diferentes lecciones. Las lecciones incluyen:
+<br>
+Teoría: Los conceptos fundamentales se explican en las clases teóricas.También se utilizan ejemplos cotidianos para explicar nociones más abstractas, como entidades y funciones. En algunos casos, las imágenes ayudan a visualizar los procesos.
+<br>
+Práctica: ¡La mejor manera de aprender es poner en práctica estos conocimientos! Por eso, esta ruta de aprendizaje incluye tareas y tutoriales. Hay instrucciones detalladas paso a paso sobre cómo realizar todas las tareas.
+<br>
+Resumen: Al final de cada módulo, encontrarás una descripción general de lo aprendido.
+<br>
+Prueba de conocimientos: No olvides realizar la prueba de conocimientos de cada módulo. Si respondes correctamente a la mayoría de las preguntas, pasa al siguiente módulo. De lo contrario, te recomendamos repasar la teoría y las tareas una vez más antes de continuar.
+    </p>
+  </section>
+
+  <section id="casos" class="container">
+    <h1 class="mb-4">Ecosistema de Mendix</h1>
+    <div class="accordion" id="ecosistemaAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Gestión de proyectos en línea
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+             Podrás crear nuevas aplicaciones, gestionar las que ya tienes (o proyectos) y comunicarte con tu equipo de proyecto.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Marketplace
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Es donde descargas el entorno de desarrollo (Mendix Studio Pro) para empezar a crear tu app,
+            incluso puedes crear tu propio contenido personalizado y compartirlo con el mundo, o solo con tu organización, a través del Marketplace.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Atlas UI
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Proporciona widgets y bloques de construcción listos para diseñar apps más atractivas e intuitivas.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Mendix Studio Pro
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Studio Pro ofrece todas las funciones de la plataforma Mendix en un único programa descargable. Este editor se ejecuta 
+            en tu equipo Windows local y muestra las páginas en modo WYSIWYG (lo que ves es lo que obtienes). Esto significa que al editar 
+            una página, esta se verá exactamente igual que cuando la aplicación esté ejecutándose. Studio Pro también cuenta con funciones
+             que permiten un control preciso de la interfaz de usuario, la lógica personalizada, la seguridad y la integración con servicios externos. Además, permite escribir código personalizado en Java o JavaScript si tu aplicación lo requiere.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recursos" class="container">
+    <h1 class="mb-4">Resumen</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+    <p>En este módulo, te familiarizaste con la interfaz de la Academia, aprendiste sobre los diferentes elementos que componen la plataforma Mendix, descargaste Studio Pro y configuraste tu perfil de la Comunidad Mendix.</p>
+  </section>
+
+  <section id="datos" class="container">
+    <h1 class="mb-4">Conocimientos</h1>
+    
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h5>Mendix Studio Pro</h5>
+        <p>Herramienta para crear, desarrollar e implementar aplicaciones.</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>Marketplace privado</h5>
+        <p>Sí, puedes compartir contenido solo con tu empresa.</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>Comunidad Mendix</h5>
+        <p>Espacio para preguntas y nuevas ideas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    function mostrarSeccion(id){
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+ <style>
+  body {
+    padding-top: 70px;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  nav.navbar {
+    background-color: #0d6efd; /* Azul navbar */
+  }
+  nav img {
+    height: 40px;
+  }
+  .nav-link {
+    color: #f8f9fa !important;
+  }
+  .nav-link:hover {
+    color: #d4d4d4 !important;
+  }
+
+  /* 🎨 Color distinto para el menú colapsado */
+  #navbarNav {
+    background-color: #add0f3; /* Fondo gris claro */
+    border-radius: 6px;
+    padding: 10px;
+  }
+  #navbarNav .nav-link {
+    color: #333 !important; /* Texto oscuro */
+  }
+  #navbarNav .nav-link:hover {
+    color: #0d6efd !important; /* Azul al pasar mouse */
+  }
+
+  section {
+    padding: 40px 0;
+  }
+  .active {
+    display: block;
+  }
+  section:not(.active) {
+    display: none;
+  }
+  .card-section {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  .card-section .card-body {
+    padding: 15px;
+  }
+  .section-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  h1, h2, h5 {
+    color: #0d6efd;
+  }
+  .accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #000000;
+    color: #fff;
+  }
+  .accordion-body {
+    background: #fff;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="mendix.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('mendix')">Objetivos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('ventajas')">Creacion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('casos')">Explorar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('recursos')">Columnas y filas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('datos')">Botones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('historia')">Paginas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('wireframe')">Errores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('epicas')">Servidor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('revisión')">Revision</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('resumen')">Resumen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="mostrarSeccion('conocimientos')">Conocimientos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Secciones -->
+  <section id="mendix" class="active container">
+    <h1 class="mb-4">Objetivo de aprendizaje</h1>
+
+    <div class="card card-section shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Al finalizar podrás:</h5>
+        <ul>
+          <li>Reconocer los elementos de la interfaz de usuario de Mendix Studio Pro</li>
+          <li>Crear una pagina de inicio</li>
+          <li>Agregar columnas, filas y botones a una pagina</li>
+          <li>Crear paginas y vincularlas a botones</li>
+          <li>Analizar errores</li>
+          <li>Utilice Team Server para colaborar eficazmente con su equipo</li>
+          <li>Confirme sus cambios en Team Server y comparta su trabajo con su equipo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="ventajas" class="container">
+    <h1 class="mb-4">Creacion de su aplicacion</h1>
+    <h2>Planificacion</h2>
+    <p>Recuerda que el objetivo es generar valor comercial rápidamente con historias más impactantes primero. Una vez que hayas identificado en qué historia empezar a trabajar, puedes profundizar en las tareas descritas para saber exactamente qué hacer.</p>
+    <img src="plan.png" alt="">
+  </section>
+
+  <section id="casos" class="container">
+    <h1 class="mb-4">Explorar Mendix Studio Pro</h1>
+    <p>1. En la parte superior de Mendix Studio Pro se encuentra la barra de control. Estos son los menús y botones, de izquierda a derecha: </p>
+    <ul>
+      <li>Archivo : abrir y cerrar documentos y proyectos</li>
+      <li>Editar : todas las opciones relacionadas con la edición de archivos, la búsqueda de elementos en su proyecto y la configuración de sus preferencias.</li>
+      <li>Ver : desde aquí, puede abrir todas las ventanas de herramientas disponibles</li>
+      <li>Aplicación : funciones relacionadas con el directorio del proyecto y los paquetes de implementación</li>
+      <li>Ejecutar : ejecuta y obtén una vista previa de tu aplicación</li>
+      <li>Control de versiones : todas las funciones relacionadas con el trabajo con Team Server (hablaremos más sobre esto en breve)</li>
+      <li>Idioma : administre la configuración del idioma y acceda a las operaciones del idioma</li>
+      <li>Ayuda : acceso rápido a entornos de ayuda</li>
+      <li>Anterior/Siguiente - Navega por tus recursos abiertos</li>
+      <li>Triángulo verde : ejecuta tu aplicación localmente</li>
+      <li>Plaza Roja : detén tu aplicación local</li>
+      <li>Publicar : implementa tu aplicación en la nube</li>
+      <li>Ver aplicación : ejecuta tu aplicación</li>
+      <li>Burbuja de chat : abre el panel de la aplicación en el Portal de Mendix</li>
+      <li>Carrito de compras : abre el Marketplace dentro de Studio Pro</li>
+      <li>Icono de IA : abre Maia Chat and Learn</li>
+      <li>Imagen de perfil : proporciona acceso al Portal de Mendix y al botón de cierre de sesión</li>
+    </ul>
+    <p>2. El Explorador de Aplicaciones permite acceder a todos los recursos de la aplicación (páginas, microflujos y navegación, por ejemplo).</p>
+    <p>3. Es el Editor, aquí es donde crearás todos tus recursos, que se abrirán en pestañas como un navegador web. Permite escribir, arrastrar y soltar, hacer clic, doble clic, clic derecho y atajos de teclado estándar como copiar, pegar, deshacer y rehacer.</p>
+    <p>4. Se encuentran los paneles Propiedades y Caja de herramientas . En la Caja de herramientas encontrará los elementos que puede arrastrar al editor. El panel Propiedades mostrará y permitirá editar los detalles de cualquier elemento al que haga clic</p>
+    <p>5. En la parte inferior, encontrarás la pestaña "Cambios" , "Errores" y "Recomendador de mejores prácticas" . La pestaña "Cambios" mostrará los cambios realizados en la aplicación desde la última sincronización. La pestaña "Errores" mostrará en tiempo real si hay alguna configuración incorrecta que impida que la aplicación se ejecute</p>
+  </section>
+
+  <section id="recursos" class="container">
+    <h1 class="mb-4">Columnas y Filas</h1>
+     <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Widgets
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+          Los widgets son cualquier elemento que se obtiene de la caja de herramientas y se coloca en una página de Mendix. El título de la página de inicio que acabas de editar es un widget, y las cuadrículas de diseño que eliminaste, con su contenido... todos son widgets. Los botones también son widgets.  
+          </div>
+        </div>
+      </div>
+       <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Cuadricula de diseño
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+          La cuadrícula de diseño es un widget que estructura espacialmente tus páginas. Consiste en una o más filas, y cada fila contiene una o más columnas. Puedes configurar cuántas filas y columnas tiene cada una. Las columnas se muestran horizontalmente y su tamaño se puede personalizar. Hay tres opciones: Autoajuste , Autorelleno y Manual .
+          </div>
+        </div>
+      </div>
+       <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Paginas responsivas
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+           Las páginas de Mendix se reconfiguran para adaptarse mejor a diferentes tamaños de pantalla y tipos de dispositivos. Esto se conoce como comportamiento responsivo y es una de las razones principales por las que Mendix es tan rápido y fácil de desarrollar. Solo necesitas diseñar una página una vez y funcionará de inmediato y se verá bien para todos los usuarios potenciales.
+          </div>
+        </div>
+      </div>
+       <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Contenedores
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Las cuadrículas de diseño son un tipo de widget contenedor . Se trata de una familia muy extensa de widgets. . Agrupar widgets mediante contenedores tiene algunas ventajas. Los widgets agrupados pueden ser: 
+            <li>Emocionado</li>
+            <li>Oculto</li>
+            <li>Estilizado</li>
+            <li>Alineado</li>
+          </div>
+        </div>
+      </div>
+  </section>
+
+    <section id="datos" class="container">
+    <h1 class="mb-4">Botones</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+      <p>Si exploras la sección de botones de la caja de herramientas, verás que hay muchos tipos diferentes para elegir. Sin embargo, son más similares entre sí de lo que parecen. De hecho, todos los botones son técnicamente el mismo tipo de widget (Botón de Acción). Un botón tiene una configuración llamada Al hacer clic : cada una de las variedades de botón simplemente tiene su Al hacer clic configurado para realizar una acción diferente, como abrir una página o eliminar algo.</p>
+  </section>
+
+    <section id="historia" class="container">
+    <h1 class="mb-4">Paginas</h1>
+    <li>Nombre de la pagina</li>
+    <p>El título debe describir la información que mostrará la página y el tipo de página.</p>
+    <li>Diseño de navegacion</li>
+    <p>El diseño de navegación determina si se trata de una página a pantalla completa o de una ventana emergente más pequeña. Es mejor ser consistente al usar los diseños, especialmente en la navegación principal.</p>
+    <li>Plantilla</li>
+    <p>Esto precargará la página con diferentes tipos de widgets y estilos, según lo que elijas. Estas plantillas, creadas por nuestro equipo de UX, son una forma sencilla de crear rápidamente páginas atractivas e intuitivas.</p>
+    </section>
+    
+    <section id="wireframe" class="container">
+    <h1 class="mb-4">Errores</h1>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+      <p>Para resolver un error, primero lea el mensaje correspondiente. Para ver la ubicación exacta del error en la aplicación, haga doble clic en el mensaje y se abrirá el elemento correspondiente. En este caso, verá cuatro mensajes que indican que no hay entidades configuradas para la fuente de datos de sus cuatro vistas de lista.</p>
+  </section>
+
+<section id="epicas" class="container">
+    <h1 class="mb-4">Servidor de equipo</h1>
+    <p>Mendix Team Server es un repositorio de versiones alojado en Mendix que contiene todas tus aplicaciones. Te permite colaborar con tu equipo y usar el control de versiones.</p>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Acceso al servidor del equipo 
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Hay dos requisitos previos para acceder a un proyecto de Team Server:
+
+            <li>Debes ser miembro del equipo del proyecto de la aplicación.</li>
+            <li>Debe tener un rol con permiso para editar el modelo. (Por defecto, este es el rol de Scrum Master o Ingeniero de Negocios).</li>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Copia de trabajo
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Una copia de trabajo es una copia local de la aplicación en la unidad de almacenamiento de tu ordenador. Esta copia local es en la que trabajas y donde realizas todos los cambios. Al empezar a trabajar en tu copia local, esta empieza a diferir de la original, que se almacena en el repositorio del Team Server. 
+        </div>
+        </div>
+      </div>
+     <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Estado y cambios
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            El estado de tu aplicación es la relación entre todos los cambios en tu copia de trabajo y la última versión en Team Server. Al trabajar en Mendix Studio Pro, los cambios se realizan localmente y se muestran en el panel "Cambios"     
+        </div>
+        </div>
+      </div>    
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Confirmar cambios
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+            Enviar cambios al repositorio se llama "commit". La mejor práctica es "commit" (comprometer) pequeños fragmentos de trabajo consistentes en el repositorio. 
+            Al confirmar, se crea una nueva revisión en el repositorio. Puedes agregar un mensaje de confirmación y seleccionar las historias de usuario relacionadas. El mensaje de confirmación debe 
+            describir los cambios realizados. Seleccionar las historias de usuario relacionadas es muy importante.Mendix recomienda mantener las confirmaciones pequeñas y relacionadas solo con una historia a la vez.   
+          </div>
+        </div>
+      </div>  
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Actualizar
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ecosistemaAccordion">
+          <div class="accordion-body">
+          Cuando uno de tus compañeros de equipo crea una característica increíble y la envía al servidor de equipo, puedes actualizar tu copia de trabajo para obtener esa característica en tu versión local de la aplicación. 
+          </div>
+        </div>
+      </div> 
+</section>
+
+<section id="revisión" class="container">
+    <h1 class="mb-4">Revisa tu trabajo</h1>
+    <p>Es posible crear instantáneas de aplicaciones que se pueden cargar en Studio Pro para crear una nueva aplicación idéntica. Estas se denominan Paquetes de Aplicaciones y tienen la extensión .mpk .Aquí te explicamos cómo usarlo para revisar tu trabajo:</p>
+        <ul>
+          <li>Descargue el archivo mpk y guárdelo en algún lugar donde pueda encontrarlo.</li>
+          <li>Abra una nueva instancia de Studio Pro.</li>
+          <li>Haga clic en Archivo > Importar paquete de aplicación…</li>
+          <li>Busca el archivo mpk que acabas de descargar. Haz clic en "Abrir" .</li>
+          <li>Haga clic en Aceptar en la ventana que aparece.</li>
+        </ul>
+</section>
+
+    <section id="resumen" class="container">
+    <h1 class="mb-4">Resumen</h1>
+    <p>En este módulo, pasó de capturar los requisitos a crear su aplicación y utilizó Studio Pro para crear las primeras páginas de su aplicación desde cero.</p>
+    <img src="recursos.jpeg" alt="Recursos" class="section-img rounded shadow-sm">
+        </section>
+
+  <section id="conocimientos" class="container">
+    <h1 class="mb-4">Conocimientos</h1>
+    
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h5>A page is responsive when:</h5>
+        <p>It works and looks good on all devices</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>How many rows can a page have?</h5>
+        <p>As many as you need</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>It is possible to place multiple widgets in a container.</h5>
+        <p>True</p>
+      </div>
+       <div class="col-md-6 mb-3">
+        <h5>You downloaded the latest version of the project from the Team Server and made some changes to the app. What do you need to do next so that your team members can view your changes?</h5>
+        <p>Commit your app to the Team Server</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    function mostrarSeccion(id){
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
